@@ -1,0 +1,17 @@
+@import '~minimal.css/minimal.css';
+
+html {
+    height: 100%;
+    background-color: #F3F7FA;
+    &:before {
+      content: '';
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100vh;
+      margin: auto;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #DEE6EF 86.13%), #F3F7FA;
+      z-index: 0;
+    }
+}
