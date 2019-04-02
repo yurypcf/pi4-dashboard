@@ -14,6 +14,7 @@ export const Form = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: "Nunito", Helvetica, Arial, sans-serif;
   img {
     width: 100px;
     margin: 10px 0 40px;
@@ -43,6 +44,7 @@ export const Form = styled.form`
     color: #fff;
     font-size: 16px;
     background: #F6C358;
+    font-weight: 600;
     height: 56px;
     border: 0;
     border-radius: 5px;

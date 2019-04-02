@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import debounce from 'lodash/debounce';
 import api from '../../lib/api/index';
-
-import Records from '../../components/Records';
+import { withRouter } from 'react-router-dom';
 
 class App extends Component {
     constructor() {
@@ -15,7 +13,7 @@ class App extends Component {
     componentDidMount() {
         this.loadRecords();
     }
-    
+
     loadRecords = async () => {
         try {
             const response = await api.get('/records');
@@ -26,11 +24,12 @@ class App extends Component {
     }
 
     render() {
-        const { records } = this.state;
         return (
-            <Records records={records} />
+            <div>
+                FODASE
+            </div>
         )
     }
 }
 
-export default App;
+export default withRouter(App);
