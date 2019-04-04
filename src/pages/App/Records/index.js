@@ -28,20 +28,19 @@ class Records extends Component {
 
     render() {
         const { records } = this.state;
-        console.log(records);
         return (
             <RecordsContainer>
                 <RecordsHeader><i className="fa fa-headphones"></i>Discos</RecordsHeader>
                 <RecordsBody>
-                {records.map(rec => (
-                    <RecordItem
-                     imgPath={rec.images[0] ? rec.images[0].url : 'Missing Photo'}
-                     title={rec.title}
-                     artist={rec.artist}
-                     genre={rec.genre}
-                     price={rec.price}    
-                     />
-                ))}
+                    {records.map(rec => (
+                        <RecordItem
+                            imgPath={rec.images[0] ? rec.images[0].url : 'Missing Photo'}
+                            title={rec.title}
+                            artist={rec.artist}
+                            genre={rec.genre}
+                            price={rec.price}
+                        />
+                    ))}
                 </RecordsBody>
             </RecordsContainer>
         )
@@ -49,22 +48,22 @@ class Records extends Component {
 }
 
 Records.propTypes = {
-  records: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number,
-      title: PropTypes.string,
-      artist: PropTypes.string,
-      genre: PropTypes.string,
-      price: PropTypes.number,
-      images: PropTypes.arrayOf(
+    records: PropTypes.arrayOf(
         PropTypes.shape({
             id: PropTypes.number,
-            record_id: PropTypes.number,
-            path: PropTypes.string
+            title: PropTypes.string,
+            artist: PropTypes.string,
+            genre: PropTypes.string,
+            price: PropTypes.number,
+            images: PropTypes.arrayOf(
+                PropTypes.shape({
+                    id: PropTypes.number,
+                    record_id: PropTypes.number,
+                    path: PropTypes.string
+                })
+            )
         })
-      )
-    })
-  ).isRequired
+    ).isRequired
 };
 
 export default withRouter(Records);
