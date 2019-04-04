@@ -13,9 +13,28 @@ export const Record = styled.div`
     max-width: 200px;
 `;
 
+export const ViewRecord = styled.div`
+    display: flex;
+    justify-content: flex-end;
+    text-align: right;
+    align-items: center;
+    width: 100%;
+    i {
+        cursor: pointer;
+        color: #777777;
+        margin: 10px
+    }
+    i:hover {
+        cursor: pointer;
+        color: #fff;
+    }
+`
+
+
 export const RecordImg = styled.img`
     width: 90%;
     margin: 10px auto;
+    text-align: center;
     border-radius: 5px;
 `;
 
@@ -23,18 +42,18 @@ export const RecordTyping = styled.h1`
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    text-align: left;
+    text-align: ${props => props.modal ? 'center' : 'left'}
     font-family: "Nunito", Helvetica, Arial, sans-serif;
     font-weight: 400;
     margin: 0 14px;
-    color: #fff;
+    color: '#fff';
     h1 {
         font-size: 0.5em;
         color: #484848;
     }
     p {
         font-size: 0.6em;
-        color: #fff;
+        color: ${props => props.modal ? '#000' : '#fff'};
     }
     p:last-child {
         font-size: 0.4em;
@@ -45,7 +64,7 @@ export const RecordPrice = styled.h1`
     display: flex;
     color: #84d5f0;
     justify-content: flex-start;
-    text-align: left;
+    text-align: ${props => props.modal ? 'center' : 'left'}
     font-family: "Nunito", Helvetica, Arial, sans-serif;
     font-weight: 600;
     font-size: 1.4em;
