@@ -26,6 +26,7 @@ class RecordItem extends Component {
 
     render() {
         const { imgPath, title, artist, genre, price } = this.props;
+        console.log(imgPath);
         const { isModalOpen } = this.state;
         return (
             <Record>
@@ -40,7 +41,14 @@ class RecordItem extends Component {
                 </RecordTyping>
                 <RecordPrice>{this.intlMonetary.format(price)}</RecordPrice>
                 <ButtonsContainer>
-                    <Link to='/cart'><RecordButton cart={false}>Comprar</RecordButton></Link>
+                    <Link to='/cart'>
+                        <RecordButton
+                            cart={false}
+                            onClick={(console.log('Yay!'))}
+                        >
+                        Comprar
+                        </RecordButton>
+                    </Link>
                     <RecordButton cart={true}>+ Carrinho</RecordButton>
                 </ButtonsContainer>
                 <RecordModal
