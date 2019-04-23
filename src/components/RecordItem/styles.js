@@ -9,7 +9,7 @@ export const Record = styled.div`
     border-radius: 5px;
     background-color: #a8a8a8;
     min-height: 200px;
-    height: 250px;
+    height: 395px;
     max-width: 200px;
 `;
 

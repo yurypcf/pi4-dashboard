@@ -39,6 +39,8 @@ class Records extends Component {
                             artist={rec.artist}
                             genre={rec.genre}
                             price={rec.price}
+                            record_id={rec.id}
+                            seller_id={rec.user_id}
                         />
                     ))}
                 </RecordsBody>

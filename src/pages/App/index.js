@@ -26,7 +26,7 @@ class App extends Component {
     render() {
         return (
             <div>
-                FODASE
+                Welcome to MelodyShare
             </div>
         )
     }
