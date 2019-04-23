@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import media from '../../styles/media';
 
 export const Record = styled.div`
     display: flex;
@@ -8,9 +9,12 @@ export const Record = styled.div`
     box-shadow: 0 0 20px rgba(0, 0, 0, .05), 0 0px 40px rgba(0, 0, 0, .08);
     border-radius: 5px;
     background-color: #a8a8a8;
-    min-height: 200px;
-    height: 395px;
-    max-width: 200px;
+    height: 450px;
+    max-width: 220px;
+    ${media.phone`
+        height: 525px;
+        max-width: 100% !important;
+    `};
 `;
 
 export const ViewRecord = styled.div`
