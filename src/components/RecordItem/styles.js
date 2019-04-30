@@ -13,7 +13,7 @@ export const Record = styled.div`
     max-width: 220px;
     ${media.phone`
         height: 525px;
-        max-width: 100% !important;
+        max-width: 100% ;
     `};
 `;
 
@@ -46,7 +46,7 @@ export const RecordTyping = styled.h1`
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    text-align: ${props => props.modal ? 'center' : 'left'}
+    text-align: left;
     font-family: "Nunito", Helvetica, Arial, sans-serif;
     font-weight: 400;
     margin: 0 14px;

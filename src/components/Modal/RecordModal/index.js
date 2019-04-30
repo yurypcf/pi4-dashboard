@@ -8,7 +8,9 @@ import {
   UserInfoContainer,
   UserTrades,
   UserName,
-  RecordImgCentered
+  RecordImg,
+  PlaylistContainer,
+  RecordContainer
 } from './styles';
 import {RecordTyping, RecordPrice} from '../../RecordItem/styles';
 
@@ -26,13 +28,23 @@ const RecordModal = ({isOpen, onRequestClose, imgPath, title, artist, genre, pri
       onEscapeKeydown={onRequestClose}
     >
       <ModalRecordContainer>
-        <RecordImgCentered src={imgPath}></RecordImgCentered>
-        <RecordTyping modal={true}><h1>{title}</h1></RecordTyping>
-        <RecordTyping modal={true}>
-          <p>{artist}</p>
-          <p>{genre}</p>
-        </RecordTyping>
-        <RecordPrice modal={true}>{intlMonetary.format(price)}</RecordPrice>
+        <RecordContainer>
+          <RecordImg src={imgPath}></RecordImg>
+          <RecordTyping><h1>{title}</h1></RecordTyping>
+          <RecordTyping modal={true}>
+            <p>{artist}</p>
+            <p>{genre}</p>
+          </RecordTyping>
+          <RecordPrice modal={true}>{intlMonetary.format(price)}</RecordPrice>
+        </RecordContainer>
+        <PlaylistContainer>
+          <ol>
+            <li>Anthem Part Two</li>
+            <li>Online Songs</li>
+            <li>First Date</li>
+            <li>Happy Holidays, You Bastard</li>
+          </ol>
+        </PlaylistContainer>
       </ModalRecordContainer>
       <ModalUserContainer>
         <UserImg src={imgPath}></UserImg>
