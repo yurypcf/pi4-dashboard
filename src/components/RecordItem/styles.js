@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import media from '../../styles/media';
 
 export const Record = styled.div`
     display: flex;
@@ -8,9 +9,12 @@ export const Record = styled.div`
     box-shadow: 0 0 20px rgba(0, 0, 0, .05), 0 0px 40px rgba(0, 0, 0, .08);
     border-radius: 5px;
     background-color: #a8a8a8;
-    min-height: 200px;
-    height: 395px;
-    max-width: 200px;
+    height: 450px;
+    max-width: 220px;
+    ${media.phone`
+        height: 525px;
+        max-width: 100% ;
+    `};
 `;
 
 export const ViewRecord = styled.div`
@@ -42,7 +46,7 @@ export const RecordTyping = styled.h1`
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    text-align: ${props => props.modal ? 'center' : 'left'}
+    text-align: left;
     font-family: "Nunito", Helvetica, Arial, sans-serif;
     font-weight: 400;
     margin: 0 14px;

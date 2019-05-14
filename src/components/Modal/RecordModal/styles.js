@@ -1,35 +1,48 @@
 import Modal from 'styled-react-modal';
 import styled from 'styled-components';
+import media from '../../../styles/media';
 
 export const StyledModal = Modal.styled`
   width: 35rem;
-  height: 28rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: #fff;
   padding: 8px 24px;
+  margin: 10px;
   border-radius: 5px;
 `
-export const RecordImgCentered = styled.img`
+export const RecordImg = styled.img`
   width: 10rem;
   height: 10rem;
-  margin: 10px auto;
+  margin: 10px;
   text-align: center;
   border-radius: 5px;
+  ${media.phone`
+      margin: 10px auto;
+  `}
 `;
+
+export const RecordContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+`
 
 export const ModalRecordContainer = styled.div`
   display: flex;
   width: 100%;
   margin: 10px;
   max-width: 34rem;
-  flex-direction: column;
-  align-items: center;
-  align-content: center;
   border: 2px solid #DCDCDC;
+  justify-content: space-between;
   border-radius: 5px;
+  ${media.phone`
+      flex-direction: column;
+  `};
 `;
 
 export const ModalUserContainer = styled.div`
@@ -40,6 +53,11 @@ export const ModalUserContainer = styled.div`
   align-content: center;
   border: 2px solid #DCDCDC;
   border-radius: 5px;
+`;
+
+export const PlaylistContainer = styled.div`
+  display: flex;
+  width: 100%;
 `;
 
 export const UserImg = styled.img`
@@ -54,7 +72,6 @@ export const UserInfoContainer = styled.div`
   display: flex;
   justify-content: space-around;
   align-content: center;
-  align-items: center;
   width: 100%;
 `;
 
@@ -63,6 +80,10 @@ export const UserName = styled.h1`
   font-weight: 600;
   color: '#000';
   font-size: 2em;
+  margin: 10px;
+  ${media.phone`
+    font-size: 1.2em;
+  `}
 `;
 
 export const UserTrades = styled.p`
@@ -70,4 +91,8 @@ export const UserTrades = styled.p`
   font-weight: 600;
   color: '#000';
   font-size: 1em;
+  margin-top: 16px;
+  ${media.phone`
+    margin-top: 10px;
+  `}
 `;

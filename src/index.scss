@@ -2,9 +2,13 @@
 
 body, html, h1, h2, p, ul, li, a {
     font-family: "Nunito", Helvetica, Arial, sans-serif;
-    color: #222222;
     text-rendering: optimizeLegibility !important;
+    color: #545454;
     -webkit-font-smoothing: antialiased !important;
     margin: 0px;
     padding: 0px;
+}
+
+body {
+    background-color: #222222;
 }
